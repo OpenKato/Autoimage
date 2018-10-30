@@ -6,6 +6,8 @@ from openpyxl import load_workbook
 
 size = 190, 190
 
+allowed_extensions = set(['png', 'jpg', 'gif',"PNG","JPG","GIF","jpeg","JPEG"])
+
 for infile in glob.glob("*.jpg"):
     file, ext = os.path.splitext(infile)
     im = Image.open(infile)
